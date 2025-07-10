@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 📚 School Management System
 
 Full-stack web application to manage Teachers, Students, Subjects, Class Lectures, and Student Enrollments.
@@ -37,3 +38,6 @@ Full-stack web application to manage Teachers, Students, Subjects, Class Lecture
 
    ```bash
    cd backend/SchoolManagementSystem.API
+=======
+# school-management-system
+>>>>>>> 6fffbf17b3755771c7f3336cc9d18b6b5e16ae91
