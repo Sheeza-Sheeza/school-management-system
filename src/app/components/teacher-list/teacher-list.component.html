@@ -1,0 +1,20 @@
+<div class="container">
+  <h2>Teacher Management</h2>
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <input formControlName="name" placeholder="Enter Teacher Name" />
+    <button type="submit" [disabled]="form.invalid">
+      {{ isEditMode ? 'Update' : 'Add' }}
+    </button>
+    <button *ngIf="isEditMode" type="button" (click)="cancelEdit()">Cancel</button>
+  </form>
+
+  <h3>All Teachers:</h3>
+  <ul>
+    <li *ngFor="let teacher of teachers">
+      {{ teacher.name }}
+      <button (click)="editTeacher(teacher)">Edit</button>
+      <button (click)="deleteTeacher(teacher.id)">Delete</button>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,16 @@
+<div class="container">
+  <h2>Subject Management</h2>
+
+  <form [formGroup]="form" (ngSubmit)="addSubject()">
+    <input formControlName="title" placeholder="Enter Subject Title">
+    <button type="submit" [disabled]="form.invalid">Add</button>
+  </form>
+
+  <h3>All Subjects:</h3>
+  <ul>
+    <li *ngFor="let subject of subjects">
+      {{ subject.title }}
+      <button (click)="deleteSubject(subject.id)">Delete</button>
+    </li>
+  </ul>
+</div>

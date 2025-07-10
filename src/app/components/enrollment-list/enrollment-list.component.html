@@ -1,0 +1,24 @@
+<div class="enrollment-container">
+  <h2>Enrolled Students</h2>
+
+  <table *ngIf="enrollments.length > 0">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Student Name</th>
+        <th>Teacher</th>
+        <th>Subject</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let e of enrollments; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ e.student?.name }}</td>
+        <td>{{ e.classLecture?.teacher?.name }}</td>
+        <td>{{ e.classLecture?.subject?.title }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="enrollments.length === 0">No students enrolled yet.</p>
+</div>

@@ -1,0 +1,16 @@
+<div class="container">
+<h2>Student Management</h2>
+
+<form [formGroup]="form" (ngSubmit)="addStudent()">
+  <input formControlName="name" placeholder="Enter Student Name">
+  <button type="submit" [disabled]="form.invalid">Add</button>
+</form>
+
+<h3>All Students:</h3>
+<ul>
+  <li *ngFor="let student of students">
+    {{ student.name }}
+    <button (click)="deleteStudent(student.id)">Delete</button>
+  </li>
+</ul>
+</div>

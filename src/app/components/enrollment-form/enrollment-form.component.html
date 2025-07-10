@@ -1,0 +1,21 @@
+<div class="container">
+  <h2>Enroll Student in Class</h2>
+
+  <form [formGroup]="form" (ngSubmit)="enroll()">
+    <label>Student:</label>
+    <select formControlName="studentId">
+      <option value="">Select Student</option>
+      <option *ngFor="let s of students" [value]="s.id">{{ s.name }}</option>
+    </select>
+
+    <label>Class Lecture:</label>
+    <select formControlName="classLectureId">
+      <option value="">Select Class</option>
+      <option *ngFor="let cl of classLectures" [value]="cl.id">
+        {{ cl.teacher.name }} - {{ cl.subject.title }}
+      </option>
+    </select>
+
+    <button type="submit" [disabled]="form.invalid">Enroll</button>
+  </form>
+</div>

@@ -1,0 +1,23 @@
+<h2>Create Class Lecture</h2>
+
+<form [formGroup]="form" (ngSubmit)="addClassLecture()">
+
+  <label>Teacher:</label>
+  <select formControlName="teacherId">
+    <option [ngValue]="null">Select Teacher</option>
+    <option *ngFor="let teacher of teachers" [ngValue]="teacher.id">
+      {{ teacher.name }}
+    </option>
+  </select>
+
+  <label>Subject:</label>
+  <select formControlName="subjectId">
+    <option [ngValue]="null">Select Subject</option>
+    <option *ngFor="let subject of subjects" [ngValue]="subject.id">
+      {{ subject.title }}
+    </option>
+  </select>
+
+  <button type="submit" [disabled]="form.invalid">Add Class Lecture</button>
+
+</form>

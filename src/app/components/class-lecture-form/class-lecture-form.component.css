@@ -1,0 +1,33 @@
+h2 {
+  color: #3F51B5;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 300px;
+  margin: 20px auto;
+  background-color: #F5F5F5;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+select, button {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #3F51B5;
+  color: white;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
