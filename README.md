@@ -1,6 +1,11 @@
 <<<<<<< HEAD
 # 📚 School Management System
 
+
+![Angular](https://img.shields.io/badge/Frontend-Angular%2019-dd0031?logo=angular&logoColor=white)  
+![.NET](https://img.shields.io/badge/Backend-ASP.NET%20Core%20Web%20API-512BD4?logo=dotnet&logoColor=white)  
+![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-336791?logo=postgresql&logoColor=white)  
+
 Full-stack web application to manage Teachers, Students, Subjects, Class Lectures, and Student Enrollments.
 
 ---
